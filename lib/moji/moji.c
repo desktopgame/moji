@@ -1,6 +1,6 @@
 ﻿#include <locale.h>
-#include <moji/moji.h>
 #include <moji/config.h>
+#include <moji/moji.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -14,10 +14,10 @@ wchar_t *moji_to_wide_char(const char *s) {
 #ifdef _WIN32
   int str_len = (int)strlen(s);
   int num_chars = MultiByteToWideChar(CP_UTF8, 0, s, str_len, NULL, 0);
-  wchar_t* wstrTo = (wchar_t*)malloc((num_chars + 1) * sizeof(wchar_t));
+  wchar_t *wstrTo = (wchar_t *)malloc((num_chars + 1) * sizeof(wchar_t));
   if (wstrTo) {
-  	MultiByteToWideChar(CP_UTF8, 0, s, str_len, wstrTo, num_chars);
-  	wstrTo[num_chars] = L'\0';
+    MultiByteToWideChar(CP_UTF8, 0, s, str_len, wstrTo, num_chars);
+    wstrTo[num_chars] = L'\0';
   }
   return wstrTo;
 #else
@@ -38,12 +38,12 @@ wchar_t *moji_to_wide_char(const char *s) {
 char *moji_to_multi_byte(const wchar_t *s) {
 #ifdef _WIN32
   int wstr_len = (int)wcslen(s);
-  int num_chars = WideCharToMultiByte(CP_UTF8, 0, s, wstr_len, NULL, 0, NULL, NULL);
-  char* strTo = (char*)malloc((num_chars + 1) * sizeof(char));
-  if (strTo)
-  {
-  	WideCharToMultiByte(CP_UTF8, 0, s, wstr_len, strTo, num_chars, NULL, NULL);
-  	strTo[num_chars] = '\0';
+  int num_chars =
+      WideCharToMultiByte(CP_UTF8, 0, s, wstr_len, NULL, 0, NULL, NULL);
+  char *strTo = (char *)malloc((num_chars + 1) * sizeof(char));
+  if (strTo) {
+    WideCharToMultiByte(CP_UTF8, 0, s, wstr_len, strTo, num_chars, NULL, NULL);
+    strTo[num_chars] = '\0';
   }
   return strTo;
 #else
