@@ -42,3 +42,6 @@ add_test(macro_test tests/macro_test/macro_test)
 
 add_subdirectory(tests/count_test)
 add_test(count_test tests/count_test/count_test)
+
+add_subdirectory(tests/convert_test)
+add_test(convert_test tests/convert_test/convert_test)
