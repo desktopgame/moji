@@ -4,7 +4,7 @@
 
 int main(int argc, char* argv[]) {
   moji_set_locale();
-  const char* word = "こんにちは世界";
+  const char* word = "Mこんにちは世界";
   const wchar_t* word2 = moji_to_wide_char(word);
   moji_printf(L"%ls\n", word2);
   free((void*)word2);

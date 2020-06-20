@@ -45,3 +45,6 @@ add_test(count_test tests/count_test/count_test)
 
 add_subdirectory(tests/convert_test)
 add_test(convert_test tests/convert_test/convert_test)
+
+add_subdirectory(tests/convert_test2)
+add_test(convert_test2 tests/convert_test2/convert_test2)
