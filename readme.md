@@ -27,3 +27,10 @@ or
 #define MOJI_WIDECHAR
 #include <moji/moji.h>
 ````
+
+## in Windows
+need more step may be for display japanese in Windows OS .
+* character type change to `multibyte character set`
+![screen shot](moji_vs.png)
+* your will encoding change to UTF8(have a BOM) for file of source code
+  * in example, usuable [kanjitranslator](https://www.kashim.com/kanjitranslator/)
