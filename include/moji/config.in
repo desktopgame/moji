@@ -1,0 +1,7 @@
+#ifndef MOJI_CONFIG_H
+#define MOJI_CONFIG_H
+
+#cmakedefine MOJI_HAVE_UNISTD (@HAVE_UNISTD@)
+#cmakedefine MOJI_HAVE_WINDOWS (@HAVE_WINDOWS@)
+
+#endif
