@@ -38,4 +38,7 @@ mark_as_advanced(MOJI_LIBRARIES)
 
 enable_testing()
 add_subdirectory(tests/macro_test)
-add_test(macro_test tests/macro_test/main)
+add_test(macro_test tests/macro_test/macro_test)
+
+add_subdirectory(tests/count_test)
+add_test(count_test tests/count_test/count_test)

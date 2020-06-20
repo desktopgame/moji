@@ -1,6 +1,7 @@
-#ifndef STRCONV_H
-#define STRCONV_H
+#ifndef MOJI_MOJI_H
+#define MOJI_MOJI_H
 #include <moji/io.h>
+#include <moji/string.h>
 #include <moji/type.h>
 
 #if defined(MOJI_MULTIBYTE)
